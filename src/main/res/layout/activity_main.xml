@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- 心电图图表 -->
+    <LinearLayout
+        android:id="@+id/chart_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#F5F5F5"
+        android:padding="8dp">
+    </LinearLayout>
+
+    <!-- 状态显示区域 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="16dp"
+        android:weightSum="2">
+
+        <!-- 心率和SDNN -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="心率"
+                android:textSize="16sp"
+                android:textColor="#333333" />
+
+            <TextView
+                android:id="@+id/hr_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0 bpm"
+                android:textSize="24sp"
+                android:textColor="#000000" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SDNN"
+                android:textSize="16sp"
+                android:textColor="#333333"
+                android:layout_marginTop="8dp" />
+
+            <TextView
+                android:id="@+id/sdnn_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0 ms"
+                android:textSize="24sp"
+                android:textColor="#000000" />
+        </LinearLayout>
+
+        <!-- 运动状态和BLE状态 -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="right">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="运动状态"
+                android:textSize="16sp"
+                android:textColor="#333333" />
+
+            <TextView
+                android:id="@+id/motion_state_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="静息"
+                android:textSize="24sp"
+                android:textColor="#000000" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="BLE状态"
+                android:textSize="16sp"
+                android:textColor="#333333"
+                android:layout_marginTop="8dp" />
+
+            <TextView
+                android:id="@+id/ble_status_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="未连接"
+                android:textSize="24sp"
+                android:textColor="#000000" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- 控制按钮区域 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="16dp"
+        android:weightSum="4">
+
+        <Button
+            android:id="@+id/start_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="开始"
+            android:background="#4CAF50"
+            android:textColor="#FFFFFF" />
+
+        <Button
+            android:id="@+id/stop_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="停止"
+            android:background="#F44336"
+            android:textColor="#FFFFFF" />
+
+        <Button
+            android:id="@+id/save_anomaly_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="保存异常"
+            android:background="#FF9800"
+            android:textColor="#FFFFFF" />
+
+        <Button
+            android:id="@+id/history_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="历史"
+            android:background="#2196F3"
+            android:textColor="#FFFFFF" />
+    </LinearLayout>
+
+    <!-- 设置按钮 -->
+    <Button
+        android:id="@+id/settings_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="设置"
+        android:background="#9E9E9E"
+        android:textColor="#FFFFFF" />
+</LinearLayout>
